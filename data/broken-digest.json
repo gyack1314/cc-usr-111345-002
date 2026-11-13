@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "tables": {
+    "rules": {
+      "file": "normal-rules.jsonl",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "bytes": 70,
+      "rows": 1,
+      "fields": [
+        "id",
+        "tenant",
+        "lower",
+        "upper",
+        "active"
+      ]
+    },
+    "transactions": {
+      "file": "normal-transactions.jsonl",
+      "sha256": "cd26d7c2ec0d7223dab4d9582209203dacba2dce872a6f9428051657facb8519",
+      "bytes": 102,
+      "rows": 2,
+      "fields": [
+        "id",
+        "snapshot",
+        "operation"
+      ]
+    },
+    "reads": {
+      "file": "normal-reads.jsonl",
+      "sha256": "a99b726fc2f74140586b9dd9ecfac17eed526148e4954bff45fdf4f4d2af7fe5",
+      "bytes": 352,
+      "rows": 2,
+      "fields": [
+        "id",
+        "transaction",
+        "kind",
+        "table",
+        "tenant",
+        "lower",
+        "upper",
+        "include_lower",
+        "include_upper",
+        "returned"
+      ]
+    },
+    "writes": {
+      "file": "normal-writes.jsonl",
+      "sha256": "744ee3e6e3d9e2fa7d6516492fc2717a6e40b86a32f1df6f93381cb18f0a2ed0",
+      "bytes": 303,
+      "rows": 2,
+      "fields": [
+        "id",
+        "transaction",
+        "table",
+        "row_id",
+        "before",
+        "after"
+      ]
+    },
+    "schedule": {
+      "file": "normal-schedule.jsonl",
+      "sha256": "02dfec1ce8c82307feaeb9c01489817835222998e1461e6429b502afee8199e9",
+      "bytes": 274,
+      "rows": 4,
+      "fields": [
+        "id",
+        "transaction",
+        "event",
+        "order"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+{"after": {"active": true, "lower": 0, "tenant": "A", "upper": 10}, "before": null, "id": "w1", "row_id": "r1", "table": "rules", "transaction": "t1"}
+{"after": {"active": true, "lower": 10, "tenant": "B", "upper": 20}, "before": null, "id": "w2", "row_id": "r2", "table": "rules", "transaction": "t2"}

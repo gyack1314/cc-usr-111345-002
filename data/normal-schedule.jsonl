@@ -1,0 +1,4 @@
+{"event": "begin", "id": "s1", "order": 1, "transaction": "t1"}
+{"event": "begin", "id": "s2", "order": 2, "transaction": "t2"}
+{"event": "commit_attempt", "id": "s3", "order": 3, "transaction": "t1"}
+{"event": "commit_attempt", "id": "s4", "order": 4, "transaction": "t2"}

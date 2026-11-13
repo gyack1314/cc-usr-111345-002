@@ -1,0 +1,2 @@
+{"id": "a1", "include_lower": true, "include_upper": false, "kind": "range", "lower": 0, "returned": ["r0"], "table": "rules", "tenant": "A", "transaction": "t1", "upper": 20}
+{"id": "a2", "include_lower": true, "include_upper": false, "kind": "range", "lower": 0, "returned": ["r0"], "table": "rules", "tenant": "A", "transaction": "t2", "upper": 20}

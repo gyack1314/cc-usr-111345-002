@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "tables": {
+    "rules": {
+      "file": "boundary-rules.jsonl",
+      "sha256": "e7c9203ef1e5646bf37eef191c0aed5734d76b9c89b06b1f5a8a8d3cd95d7ede",
+      "bytes": 70,
+      "rows": 1,
+      "fields": [
+        "id",
+        "tenant",
+        "lower",
+        "upper",
+        "active"
+      ]
+    },
+    "transactions": {
+      "file": "boundary-transactions.jsonl",
+      "sha256": "cd26d7c2ec0d7223dab4d9582209203dacba2dce872a6f9428051657facb8519",
+      "bytes": 102,
+      "rows": 2,
+      "fields": [
+        "id",
+        "snapshot",
+        "operation"
+      ]
+    },
+    "reads": {
+      "file": "boundary-reads.jsonl",
+      "sha256": "b439358f019bf8e495e5e458dec40fb50c81457c34a536966e9b940c0c763ab0",
+      "bytes": 352,
+      "rows": 2,
+      "fields": [
+        "id",
+        "transaction",
+        "kind",
+        "table",
+        "tenant",
+        "lower",
+        "upper",
+        "include_lower",
+        "include_upper",
+        "returned"
+      ]
+    },
+    "writes": {
+      "file": "boundary-writes.jsonl",
+      "sha256": "d175dc508a1faf1c866581316671d631898d9e5e6f5dfc8f1d5c4c4cae9fbe9e",
+      "bytes": 303,
+      "rows": 2,
+      "fields": [
+        "id",
+        "transaction",
+        "table",
+        "row_id",
+        "before",
+        "after"
+      ]
+    },
+    "schedule": {
+      "file": "boundary-schedule.jsonl",
+      "sha256": "02dfec1ce8c82307feaeb9c01489817835222998e1461e6429b502afee8199e9",
+      "bytes": 274,
+      "rows": 4,
+      "fields": [
+        "id",
+        "transaction",
+        "event",
+        "order"
+      ]
+    }
+  }
+}
