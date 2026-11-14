@@ -19,3 +19,19 @@ python -m transaction_data.cli data/boundary.json
 docker build -t transaction-data .
 docker run --rm transaction-data
 ```
+
+## 可串行化事务认证引擎 `serlake/`
+
+在上述资料检查之外，`serlake/` 提供一个独立的本地湖仓事务引擎：冻结多表快照、
+稳定主键点读、schema 绑定的复合键区间读、完整行插入/更新/删除；提交时按**实际
+读写依赖**（ww 写覆盖 / wr 读到版本 / rw 读-写反依赖）构建多版本串行图，成环即拒绝
+未提交候选并输出完整事务链与点键/区间见证。认证与正式发布在同一 SQLite 临界事务内
+原子生效，长读事务不持全库写锁，回收水位与保留预算显式管理，并附带不复用认证器结论
+的独立历史检查器。
+
+设计说明见 [docs/serializable-design.md](docs/serializable-design.md)。
+
+```sh
+PYTHONPATH=. python3 demos/run_scenarios.py          # 七个认证场景演示
+PYTHONPATH=. python3 -m unittest discover -s tests_serlake -v
+```
